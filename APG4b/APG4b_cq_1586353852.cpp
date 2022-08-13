@@ -1,0 +1,27 @@
+#include "iostream"
+#include "string"
+#include "vector"
+
+using namespace std; // std::を省略して書くことができる
+
+int main() {
+  int A, B;
+  string op;
+  cin >> A >> op >> B;
+  if (op == "+") {
+    cout << A + B << endl;
+  } else if (op == "-") {
+    cout << A - B << endl;
+  } else if (op == "*") {
+    cout << A * B << endl;
+  } else if (op == "/") {
+    if (B != 0) {
+      cout << A / B << endl;
+    } else {
+      cout << "error" << endl;
+    }
+  } else {
+    cout << "error" << endl;
+  }
+  return 0;
+}

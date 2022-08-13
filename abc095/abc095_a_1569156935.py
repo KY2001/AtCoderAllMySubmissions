@@ -1,0 +1,1 @@
+print(700+100*len([i for i in list(input()) if i == "o"]))

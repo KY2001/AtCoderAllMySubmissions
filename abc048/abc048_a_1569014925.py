@@ -1,0 +1,1 @@
+print("A"+list(list(map(str,input().split()))[1])[0]+"C")

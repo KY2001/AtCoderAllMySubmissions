@@ -1,0 +1,38 @@
+#!usr/bin/env python3
+import sys
+import math
+import string
+import collections
+import fractions
+import random
+from operator import itemgetter
+import itertools
+from collections import deque
+import copy
+import heapq
+import bisect
+
+MOD = 10 ** 9 + 7
+INF = float('inf')
+input = lambda: sys.stdin.readline().strip()
+
+sys.setrecursionlimit(10 ** 8)
+
+X, Y = map(int, input().split())
+if X >= Y:
+    print(X - Y)
+else:
+    ans = INF
+    for i in range(100):
+        ret = i
+        gap = abs(X * pow(2, i) - Y)
+        for j in range(70):
+            if (gap >> j) & 1:
+                if j <= i:
+                    ret += 1
+                else:
+                    ret += pow(2, j-i)
+        ans = min(ans, ret)
+    print(ans)
+
+
